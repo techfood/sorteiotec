@@ -2,12 +2,12 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="utfpr_sorteiotec_war_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <class>br.data.Loja</class>
-    <class>br.data.Cliente</class>
-    <class>br.data.Cupom</class>
-    <class>br.data.Sorteio</class>
-    <class>br.data.ResultadoSorteio</class>
-    <class>br.data.Endereco</class>
+    <class>br.data.entity.Sorteio</class>
+    <class>br.data.entity.Cliente</class>
+    <class>br.data.entity.Cupom</class>
+    <class>br.data.entity.Loja</class>
+    <class>br.data.entity.Endereco</class>
+    <class>br.data.entity.ResultadoSorteio</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/sorteiotec"/>
