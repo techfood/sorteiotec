@@ -5,16 +5,8 @@ html {
     margin: 0;
 }
 
-.container{
-    position: relative !important;
-}
-
-
 .navbar{
     background-color: #00ff6b !important;
-    //min-height: 100px;
-    border-bottom: 20px;
-    border-bottom-color: black;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -22,7 +14,7 @@ html {
 .corpo {
     background: url("../assets/luck.png");
     width: 100%;
-    height: auto;
+    height: 100%;
     background-size: auto;
 }
 
