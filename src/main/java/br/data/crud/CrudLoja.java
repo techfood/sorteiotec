@@ -1,5 +1,6 @@
 package br.data.crud;
 
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
@@ -11,6 +12,18 @@ public class CrudLoja extends AbstractCrud<br.data.entity.Loja>{
         super(br.data.entity.Loja.class);
     }
 
+    public List<br.data.entity.Loja> SelectByNome(String nome) {
+        List<br.data.entity.Loja> lista;
+        try {
+            lista= getEntityManager().createNamedQuery("Loja.findByNome").setParameter("nome", "%" 
+                    + nome.toUpperCase() + "%").getResultList();
+            return lista;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+    
     @Override
     protected EntityManager getEntityManager() {
          if (em == null) {
