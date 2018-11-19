@@ -150,7 +150,7 @@ public class JsfCliente {
                     "Erro!", "Informe o administrador do erro: " + msg);
             FacesContext.getCurrentInstance().addMessage(null, message);
         }
-        return "/operacoes/index.xhtml";
+        return "index.xhtml";
     }
     
     public String persist() {
@@ -181,6 +181,6 @@ public class JsfCliente {
             return null;
         }
         
-        return "/operacoes/index.xhtml";
+        return "index.xhtml";
     }
 }
