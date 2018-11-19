@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <h:head>
+      
+        <title>Cadastro Loja</title>
+        <link rel="stylesheet" href="./css/bootstrap.css"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+        
+    </h:head>
+    
+    <h:body>
+        
+        <h1>Cadastro de Loja</h1>
+        <h:form>
+
+            <br></br>
+            Cnpj:
+            <h:inputText value="#{jsfLoja.pkCnpjLoja}"  />
+
+            <br></br>
+            Nome:
+            <h:inputText value="#{jsfLoja.nomeLoja}" />
+
+            <br></br>
+            Senha:
+            <h:inputText value="#{jsfLoja.senhaLoja}" />
+
+            <br></br>
+            Telefone:
+            <h:inputText value="#{jsfLoja.telefoneLoja}" />
+
+            <h:commandButton value="salvar novo registro" action="#{jsfLoja.persist()}"/> 
+
+            <!--<p:messages id="messages" showDetail="true" closable="true">
+                <p:autoUpdate />
+            </p:messages>
+
+            Codigo:
+            <p:inputText value="#//{jsfTeste.codigo}"  />
+
+            <br></br>
+            Nome:
+            <p:inputText value="#//{jsfTeste.nome}" />
+
+            <br></br>
+            Teste1:
+            <p:selectOneMenu value="#//{jsfTeste.codTeste1}" required="true" requiredMessage="Selecione uma opção no menu teste 1    ">
+                <f:selectItem  itemLabel="=== selecione um ==="/>
+                <f:selectItems value="#//{jsfTeste1.all}" var="t1" itemLabel="#//{t1.nome}" itemValue="#//{t1.codigo}"/>
+            </p:selectOneMenu>
+
+            <br></br>
+            <p:commandButton value="salvar novo registro" action="#//{jsfTeste.persist()}"  ajax="false"/> 
+    -->
+        </h:form>
+    </h:body>        
+</html>
