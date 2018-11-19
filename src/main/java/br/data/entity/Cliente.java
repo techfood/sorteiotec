@@ -44,7 +44,7 @@ public class Cliente implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "pk_cpf_cliente")
-    private Integer pkCpfCliente;
+    private String pkCpfCliente;
     @Size(max = 100)
     @Column(name = "nome_cliente")
     private String nomeCliente;
@@ -66,15 +66,15 @@ public class Cliente implements Serializable {
     public Cliente() {
     }
 
-    public Cliente(Integer pkCpfCliente) {
+    public Cliente(String pkCpfCliente) {
         this.pkCpfCliente = pkCpfCliente;
     }
 
-    public Integer getPkCpfCliente() {
+    public String getPkCpfCliente() {
         return pkCpfCliente;
     }
 
-    public void setPkCpfCliente(Integer pkCpfCliente) {
+    public void setPkCpfCliente(String pkCpfCliente) {
         this.pkCpfCliente = pkCpfCliente;
     }
 

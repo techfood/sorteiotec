@@ -14,7 +14,6 @@ import javax.faces.context.FacesContext;
 @RequestScoped
 public class JsfLoja {
 
-    
     private String pkCnpjLoja;
     private String senhaLoja;
     private String nomeLoja;
@@ -62,15 +61,15 @@ public class JsfLoja {
     
     public java.util.List<br.data.entity.Loja> getSelect() {
         
-        if (this.nomeLoja != null && !this.nomeLoja.equals("")) {
-            return new br.data.crud.CrudLoja().SelectByNome(nomeLoja);
+        if (this.pkCnpjLoja != null && !this.pkCnpjLoja.equals("")) {
+            return new br.data.crud.CrudLoja().SelectByNome(pkCnpjLoja);
         } else {
             return null;
         }
     }
     
     public void remove(br.data.entity.Loja loja) {
-        Exception e =new br.data.crud.CrudLoja().remove(loja);
+        Exception e = new br.data.crud.CrudLoja().remove(loja);
          if (e == null) {
             FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, 
                     "Sucesso!!", "Registro excluido com sucesso");

@@ -15,7 +15,7 @@ public class CrudLoja extends AbstractCrud<br.data.entity.Loja>{
     public List<br.data.entity.Loja> SelectByNome(String nome) {
         List<br.data.entity.Loja> lista;
         try {
-            lista= getEntityManager().createNamedQuery("Loja.findByNome").setParameter("nome", "%" 
+            lista= getEntityManager().createNamedQuery("Loja.findByPkCnpjLoja").setParameter("pk_cnpj_loja", "%" 
                     + nome.toUpperCase() + "%").getResultList();
             return lista;
         } catch (Exception e) {

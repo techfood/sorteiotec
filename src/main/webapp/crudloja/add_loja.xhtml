@@ -1,5 +1,3 @@
-// arrumar aqui
-
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html 
@@ -17,35 +15,50 @@
         
     </h:head>
     
-    
-    
-        <ui:define name="content">
-            <h1>Cadastrar Teste</h1>
-            <h:form>
-                <p:messages id="messages" showDetail="true" closable="true">
-                    <p:autoUpdate />
-                </p:messages>
+    <h:body>
+        
+        <h1>Cadastro de Loja</h1>
+        <h:form>
 
+            <br></br>
+            Cnpj:
+            <h:inputText value="#{jsfLoja.pkCnpjLoja}"  />
 
+            <br></br>
+            Nome:
+            <h:inputText value="#{jsfLoja.nomeLoja}" />
 
-                Codigo:
-                <p:inputText value="#{jsfTeste.codigo}"  />
+            <br></br>
+            Senha:
+            <h:inputText value="#{jsfLoja.senhaLoja}" />
 
-                <br></br>
-                Nome:
-                <p:inputText value="#{jsfTeste.nome}" />
-                
-                <br></br>
-                Teste1:
-                <p:selectOneMenu value="#{jsfTeste.codTeste1}" required="true" requiredMessage="Selecione uma opção no menu teste 1    ">
-                    <f:selectItem  itemLabel="=== selecione um ==="/>
-                    <f:selectItems value="#{jsfTeste1.all}" var="t1" itemLabel="#{t1.nome}" itemValue="#{t1.codigo}"/>
-                </p:selectOneMenu>
+            <br></br>
+            Telefone:
+            <h:inputText value="#{jsfLoja.telefoneLoja}" />
 
-                <br></br>
-                <p:commandButton value="salvar novo registro" action="#{jsfTeste.persist()}"  ajax="false"/> 
+            <h:commandButton value="salvar novo registro" action="#{jsfLoja.persist()}"/> 
 
-            </h:form>
-        </ui:define>
-    </ui:composition>
+            <!--<p:messages id="messages" showDetail="true" closable="true">
+                <p:autoUpdate />
+            </p:messages>
+
+            Codigo:
+            <p:inputText value="#//{jsfTeste.codigo}"  />
+
+            <br></br>
+            Nome:
+            <p:inputText value="#//{jsfTeste.nome}" />
+
+            <br></br>
+            Teste1:
+            <p:selectOneMenu value="#//{jsfTeste.codTeste1}" required="true" requiredMessage="Selecione uma opção no menu teste 1    ">
+                <f:selectItem  itemLabel="=== selecione um ==="/>
+                <f:selectItems value="#//{jsfTeste1.all}" var="t1" itemLabel="#//{t1.nome}" itemValue="#//{t1.codigo}"/>
+            </p:selectOneMenu>
+
+            <br></br>
+            <p:commandButton value="salvar novo registro" action="#//{jsfTeste.persist()}"  ajax="false"/> 
+    -->
+        </h:form>
+    </h:body>        
 </html>
